@@ -77,6 +77,19 @@ namespace VehicleIdentificationNumberLib.UnitTest
             }
         }
 
+        public class ImplicitConversionOperator
+        {
+            [Test]
+            public void HasImplicitConversionToString()
+            {
+                string s = "1HGBH41JXMN109106";
+
+                Vin v = new Vin(s);
+
+                s.Should().Be(v);
+            }
+        }
+
         public class ToString
         {
             [Test]

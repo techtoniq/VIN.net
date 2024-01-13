@@ -40,6 +40,11 @@
             return vin;
         }
 
+        public static implicit operator string(Vin vin)
+        {
+            return vin._value;
+        }
+
         #endregion Public Operators
 
         #region Public Object Overrides
